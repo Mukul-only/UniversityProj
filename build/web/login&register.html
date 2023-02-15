@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>my design</title>
+    <link rel="stylesheet" href="style.css" />
+    <!---we had linked our css file----->
+</head>
+
+<body>
+    <a class="bg"></a>
+    <header>
+        <div class="full-page">
+            <div class="navbar">
+                <a class="navbar-brand" href="#"><img src="images/logo.png" /></a>
+                <nav>
+                    <ul id="MenuItems">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="aboutus.html">About Us</a></li>
+                        <li>
+                            <button class="loginbtn"
+                                onclick="document.getElementById('login-form').style.display='block'"
+                                style="width: auto">
+                                Login
+                            </button>
+                        </li>
+                        <div id="login-form" class="login-page">
+                            <div class="form-box">
+                                <div class="button-box">
+                                    <div id="btn"></div>
+                                    <button type="button" onclick="login()" class="toggle-btn">
+                                        Log In
+                                    </button>
+                                    <button type="button" onclick="register()" class="toggle-btn">
+                                        Register
+                                    </button>
+                                </div>
+                                <form id="login" class="input-group-login" action="login.jsp">
+                                    <input type="text" class="input-field" name="email" placeholder="Email Id" required />
+                                    <input type="password" class="input-field" name="pass" placeholder="Enter Password" required />
+                                    <input type="checkbox" class="check-box" /><span>Remember Password</span>
+                                    <button type="submit" class="submit-btn"> LogIn
+                                    </button>
+                                </form>
+                                <form id="register" class="input-group-register" action="inserthandler.jsp">
+                                    <input type="text" name="fn" class="input-field" placeholder="First Name" required />
+                                    <input type="email" name="email" class="input-field" placeholder="Email Id" required />
+                                    <input type="text" name="gender" class="input-field" placeholder="Gender" required />
+                                    <input type="text" name="course" class="input-field" placeholder="Cousre" required />
+                                    <input type="text" name="year" class="input-field" placeholder="Year" required />
+                                    <input type="text" name="phno" class="input-field" placeholder="Phone No" required />
+                                    <input type="password" name="pass" class="input-field" placeholder="Enter Password" required />
+                                    <button type="submit" class="submit-btn">Register</button>
+                                </form>
+                            </div>
+                        </div>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+
+        <div class="container">
+            <script>
+                var x = document.getElementById("login");
+                var y = document.getElementById("register");
+                var z = document.getElementById("btn");
+                function register() {
+                    x.style.left = "-400px";
+                    y.style.left = "50px";
+                    z.style.left = "110px";
+                }
+                function login() {
+                    x.style.left = "50px";
+                    y.style.left = "450px";
+                    z.style.left = "0px";
+                }
+            </script>
+        </div>
+    </header>
+</body>
+
+</html>
